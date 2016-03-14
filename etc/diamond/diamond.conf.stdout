@@ -1,0 +1,22 @@
+[server]
+
+user = root
+group = root
+
+handlers = diamond.handler.archive.ArchiveHandler
+handlers_config_path = /etc/diamond/handlers/
+collectors_path = /usr/share/diamond/collectors/
+collectors_config_path = /etc/diamond/collectors/
+
+collectors_reload_interval = 3600
+
+[handlers]
+
+[[default]]
+
+[[ArchiveHandler]]
+log_file = /dev/stdout
+
+[collectors]
+[[default]]
+interval = 10

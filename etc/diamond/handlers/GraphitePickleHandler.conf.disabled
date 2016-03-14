@@ -1,0 +1,14 @@
+### Options for GraphitePickleHandler
+
+# Graphite server host
+host = 127.0.0.1
+
+# Port to send metrics to
+port = 2004
+
+# Socket timeout (seconds)
+timeout = 15
+
+# Batch size for pickled metrics
+batch = 256
+

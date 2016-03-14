@@ -1,0 +1,7 @@
+enabled = True
+path_suffix = ""
+ttl_multiplier = 2
+measure_collector_time = True
+byte_unit = byte,
+sanitize_slashes = True
+client_url = unix://var/run/docker.sock

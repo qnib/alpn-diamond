@@ -1,0 +1,20 @@
+consul:
+  image: qnib/alpn-consul
+  ports:
+   - 8500
+  environment:
+   - DC_NAME=dc1
+   - CONSUL_BOOTSTRAP_EXPECT=1
+  dns: 127.0.0.1
+  hostname: consul
+
+diamond:
+  image: qnib/alpn-diamond
+  dns:
+   - 127.0.0.1
+  environment:
+   - DC_NAME=dc1 
+  links:
+   - consul:consul
+  volumes:
+   - /var/run/docker.sock:/var/run/docker.sock:ro
