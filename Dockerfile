@@ -14,7 +14,7 @@ ENV DOCKER_SERVER=boot2docker \
     DIAMOND_PATH_PREFIX=diamond
 ADD etc/diamond/diamond.conf.stdout \
     /etc/diamond/
-ADD etc/diamond/collectors/DockerStatsCollector.conf.disabled \
+ADD etc/diamond/collectors/*.conf.disabled \
     /etc/diamond/collectors/
 ADD etc/diamond/handlers/* /etc/diamond/handlers/
 RUN echo "diamond -f -c /etc/diamond/diamond.conf.stdout -l --skip-pidfile" >> /root/.bash_history

@@ -89,30 +89,8 @@ path_prefix = {{ env "DIAMOND_PATH_PREFIX" }}.{{ env "DOCKER_SERVER" }}
 # instance_prefix = instances
 
 # Default Poll Interval (seconds)
-interval = 10
-collection_timeout = 7
-
-################################################################################
-# Default enabled collectors
-################################################################################
-
-[[CPUCollector]]
-enabled = True
-
-[[DiskSpaceCollector]]
-enabled = True
-
-[[DiskUsageCollector]]
-enabled = True
-
-[[LoadAverageCollector]]
-enabled = True
-
-[[MemoryCollector]]
-enabled = True
-
-[[VMStatCollector]]
-enabled = True
+interval = 29
+collection_timeout = 25
 
 ################################################################################
 ### Options for logging
